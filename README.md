@@ -43,11 +43,3 @@ This project highlights proficiency in:
 - **npm** — Dependency management   
 
 ---
-
-## ⚙️ Project Setup  
-
-### 📥 Clone the Repository  
-
-```bash
-git clone https://github.com/AlexandruBostanica/e2eAutomationProjectWithCypress.git
-cd e2eAutomationProjectWithCypress
