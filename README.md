@@ -13,7 +13,7 @@ Modern & Scalable UI Test Automation Framework
 This repository showcases a **professional, production-style End-to-End (E2E) test automation framework using Cypress**.  
 It demonstrates how to create clean, maintainable, scalable UI test automation that mirrors real QA engineering standards.
 
-This project highlights proficiency in:
+This project highlights knowledge of:
 
 - Test automation architecture  
 - Writing reusable test logic  
