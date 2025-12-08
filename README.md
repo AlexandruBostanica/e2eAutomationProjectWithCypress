@@ -61,7 +61,9 @@ npx cypress open	Opens Cypress Test Runner (GUI)
 npx cypress run	Runs tests in headless mode
 npm test	(Optional alias) Run all tests
 
-Future Enhancements
+---
+
+## 📈 Future Enhancements
 
 CI/CD pipeline connected with GitHub Actions
 
@@ -70,7 +72,7 @@ Allure / Mochawesome Test Report Dashboard
 API & DB validation
 
 Parallel execution
-
-License
+---
+## License
 
 This project is licensed under the MIT License — meaning you can reuse it professionally.
