@@ -63,7 +63,7 @@ npm test	(Optional alias) Run all tests
 
 ---
 
-## 📈 Future Enhancements
+### 📈 Future Enhancements
 
 CI/CD pipeline connected with GitHub Actions
 
