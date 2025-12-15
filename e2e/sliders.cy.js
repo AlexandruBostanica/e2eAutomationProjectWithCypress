@@ -1,8 +1,5 @@
 /// <reference types="cypress" />
 
-import { navigateTo } from "../page-objects/POMnavigationPage"
-import { faker } from '@faker-js/faker';
-
 // Open the application before each test to ensure a consistent starting state
 beforeEach('Open application', () => {
     cy.visit('/')
@@ -29,4 +26,5 @@ describe('Slider Control Interaction', () => {
         // Slider reflects the new value and UI displays the updated temperature
     })
 })
+
 
