@@ -10,6 +10,7 @@ beforeEach('Open application', () => {
 describe('Dialog Interactions', () => {
 
 it('Opens component dialog successfully', () => {
+    
     navigateTo.dialogsPage()
 
     cy.contains('Open Dialog with component').click()
@@ -18,6 +19,7 @@ it('Opens component dialog successfully', () => {
 })
 
 it('Opens template dialog successfully', () => {
+    
     navigateTo.dialogsPage()
 
     cy.contains('Open Dialog with template').click()
@@ -26,6 +28,7 @@ it('Opens template dialog successfully', () => {
 })
 
 it('Opens delayed dialog after 3 seconds', () => {
+    
     navigateTo.dialogsPage()
 
     cy.contains('Open with delay 3 seconds').click()
@@ -34,6 +37,7 @@ it('Opens delayed dialog after 3 seconds', () => {
 })
 
 it('Opens delayed dialog after 10 seconds', () => {
+    
     navigateTo.dialogsPage()
 
     cy.contains('Open with delay 10 seconds').click()
@@ -43,6 +47,7 @@ it('Opens delayed dialog after 10 seconds', () => {
 })
 
 it('Closes iframe dialog using ESC key', () => {
+    
     navigateTo.dialogsPage()
 
     cy.frameLoaded('[data-cy="esc-close-iframe"]')
@@ -52,6 +57,7 @@ it('Closes iframe dialog using ESC key', () => {
     })
 
  it('Closes iframe dialog when ESC key is disabled', () => {
+     
     navigateTo.dialogsPage()
 
     cy.frameLoaded('[data-cy="esc-close-iframe"]')
@@ -61,6 +67,7 @@ it('Closes iframe dialog using ESC key', () => {
 
     })
 it('Open and close dialog with backdrop click enabled', () => {
+    
     navigateTo.dialogsPage()
 
     cy.contains('Open Dialog with backdrop click').click()
@@ -70,6 +77,7 @@ it('Open and close dialog with backdrop click enabled', () => {
 })
 
 it('Open and close dialog with backdrop click disabled', () => {
+    
     navigateTo.dialogsPage()
 
     cy.contains('Open without backdrop click').click()
@@ -99,6 +107,7 @@ it('Opens a random dialog instance successfully', () => {
 })
 
 it('Triggers native browser confirmation dialog by default', () => {
+    
     navigateTo.smartTablePage()
 
  cy.get('.nb-trash').first().click()
@@ -108,6 +117,7 @@ it('Triggers native browser confirmation dialog by default', () => {
 })
 
 it('Triggers native browser confirmation dialog with custom boolean handling', () => {
+    
     navigateTo.smartTablePage()
     
  cy.get('.nb-trash').first().click()
@@ -117,4 +127,5 @@ it('Triggers native browser confirmation dialog with custom boolean handling', (
     cy.get('.nb-trash').first().click()
     cy.get('@dialog').should('be.calledWith', 'Are you sure you want to delete?')
 })
+
 })
