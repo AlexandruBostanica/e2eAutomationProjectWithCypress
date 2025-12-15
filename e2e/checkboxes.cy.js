@@ -1,7 +1,6 @@
 /// <reference types="cypress" />
 
 import { navigateTo } from "../page-objects/POMnavigationPage"
-import { faker } from '@faker-js/faker';
 
 // Runs before each test to ensure a clean starting point
 beforeEach('Open application', () => {
@@ -32,3 +31,4 @@ describe('Checkbox Behavior', () => {
         })
     })
 })
+
