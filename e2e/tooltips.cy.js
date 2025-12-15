@@ -1,7 +1,6 @@
 /// <reference types="cypress" />
 
 import { navigateTo } from "../page-objects/POMnavigationPage"
-import { faker } from '@faker-js/faker';
 
 // Open the application before each test to ensure consistent state
 beforeEach('Open application', () => {
@@ -44,3 +43,4 @@ describe('Tooltip Visibility', () => {
         // Tooltip icon renders correctly on hover
     })
 })
+
