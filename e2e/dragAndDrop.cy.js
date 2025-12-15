@@ -1,7 +1,6 @@
 /// <reference types="cypress" />
 
 import { navigateTo } from "../page-objects/POMnavigationPage"
-import { faker } from '@faker-js/faker';
 
 // Ensures each test starts from a clean application state
 beforeEach('Open application', () => {
@@ -50,3 +49,4 @@ describe('Drag and Drop Operations', () => {
         // All todo items are successfully transferred to the drop zone
     })
 })
+
