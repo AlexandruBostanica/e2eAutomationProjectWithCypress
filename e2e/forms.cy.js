@@ -23,7 +23,9 @@ it('Submits inline form successfully', () => {
 })
 
 it('Submits grid-based form successfully', () => {
+    
     navigateTo.formLayoutsPage() 
+    
     cy.get('#inputEmail1').type(faker.internet.email())
     cy.contains('nb-card', 'Using the Grid').find('[type="radio"]').then(radioButtons => {
         cy.wrap(radioButtons).eq(0).check({force:true}).should('be.checked')
@@ -88,4 +90,5 @@ it('Submits horizontal form successfully', () => {
     cy.contains('nb-card', 'Horizontal form').contains('button', 'Sign in').click()  
 })
 })
+
 })
