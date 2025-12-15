@@ -10,7 +10,9 @@ beforeEach('Open application', () => {
 describe('Checkbox behavior', () => {
 
 it('Checks and unchecks multiple checkboxes with expected state changes', () => {
+    
     navigateTo.toastrPage()
+    
     cy.get('[type="checkbox"]').then(checkboxes => {
         cy.wrap(checkboxes).eq(0).check({force:true}).should('be.checked')
         cy.wrap(checkboxes).eq(1).check({force:true}).should('be.checked')
@@ -20,4 +22,5 @@ it('Checks and unchecks multiple checkboxes with expected state changes', () => 
         cy.wrap(checkboxes).eq(2).uncheck({force:true}).should('not.be.checked')
   })
 })
+
 })
