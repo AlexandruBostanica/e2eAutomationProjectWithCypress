@@ -1,3 +1,12 @@
+/// <reference types="cypress" />
+
+import { navigateTo } from "../page-objects/POMnavigationPage"
+import { faker } from '@faker-js/faker';
+
+beforeEach('Open application', () => {
+    cy.visit('/')
+})
+
 describe('Authentication Flows', () => {
 
     // Test: Registration workflow for a new user
