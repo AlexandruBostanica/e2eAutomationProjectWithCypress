@@ -10,12 +10,16 @@ beforeEach('Open application', () => {
 describe('Dropdown list selections', () => {
 
     it('Selects a native dropdown option and verifies selection', () => {
+        
     navigateTo.toastrPage()
+        
     cy.contains('div', 'Toast type:').find('select').select('danger')
         })
 
     it('Selects from custom dropdown and verifies positions iteratively', () => {
+        
     navigateTo.toastrPage()
+        
 cy.contains('div', 'Position:').find('nb-select').click()
 cy.get('.option-list').contains('top-right').click()
 cy.contains('div', 'Position:').find('nb-select').should('have.text', 'top-right')
@@ -29,3 +33,4 @@ cy.contains('div', 'Position:').find('nb-select').then(dropdown => {
         })
     })
 })
+
