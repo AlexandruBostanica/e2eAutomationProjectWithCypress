@@ -14,9 +14,6 @@ describe('Slider Control Interaction', () => {
     // and that the selected value is correctly reflected in the UI
     it('Adjusts temperature slider to specific value and verifies display', () => {
 
-        // Navigate to the page containing the temperature slider
-        navigateTo.sliderPage()
-
         // Interact directly with the SVG slider handle by manipulating its coordinates
         // This approach is commonly used when sliders do not support standard input events
         cy.get('[tabtitle="Temperature"] circle')
@@ -32,3 +29,4 @@ describe('Slider Control Interaction', () => {
         // Slider reflects the new value and UI displays the updated temperature
     })
 })
+
