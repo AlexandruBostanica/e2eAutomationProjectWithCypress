@@ -14,6 +14,7 @@ describe('Smart table data operations', () => {
         const age = faker.number.int({ min: 18, max: 80 })
 
     navigateTo.smartTablePage()
+           
     cy.get('tbody').contains('tr', 'Larry').then(tableRow => {
         cy.wrap(tableRow).find('.nb-edit').click()
         cy.wrap(tableRow).find('[placeholder="Age"]').clear().type(age.toString())
@@ -27,6 +28,7 @@ describe('Smart table data operations', () => {
         const lastName = faker.person.lastName()
 
     navigateTo.smartTablePage()
+        
     cy.get('.nb-plus').click()
     cy.get('thead tr').eq(2).then(tableRow1 => {
     cy.wrap(tableRow1).find('[placeholder="First Name"]').type(firstName)
@@ -80,4 +82,5 @@ it('Filters web table entries by age and verifies filtered results', () =>{
     })
    })
 })
+
 })
