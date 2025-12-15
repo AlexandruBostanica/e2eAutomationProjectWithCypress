@@ -1,7 +1,6 @@
 /// <reference types="cypress" />
 
 import { navigateTo } from "../page-objects/POMnavigationPage"
-import { faker } from '@faker-js/faker';
 
 // Ensure the application is opened fresh before each test
 beforeEach('Open application', () => {
@@ -65,3 +64,4 @@ describe('Dropdown List Selections', () => {
         // All dropdown options can be selected successfully
     })
 })
+
