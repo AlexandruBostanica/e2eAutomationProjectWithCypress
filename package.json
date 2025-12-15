@@ -1,0 +1,19 @@
+{
+  "name": "cypress-playground",
+  "scripts": {
+    "clean:reports": "rimraf cypress/reports",
+    "cypress:open": "npx cypress open",
+    "cypress:run": "npm run clean:reports && npx cypress run",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "cypress": "^14.5.2",
+    "cypress-iframe": "^1.0.1",
+    "cypress-mochawesome-reporter": "^4.0.2",
+    "rimraf": "^6.1.2"
+  },
+  "dependencies": {
+    "@faker-js/faker": "^10.1.0",
+    "cypress-real-events": "^1.15.0"
+  }
+}
