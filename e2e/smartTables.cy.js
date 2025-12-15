@@ -50,6 +50,7 @@ it('Updates entire table row with multiple fields and verifies all values', () =
     const email = faker.internet.email()
 
     navigateTo.smartTablePage()
+    
     cy.get('tbody').contains('tr', 'Ruben').then(tablerows => {
         cy.wrap(tablerows).find('.nb-edit').click()
         cy.wrap(tablerows).find('[placeholder="First Name"]').clear().type(firstName)
@@ -68,8 +69,11 @@ it('Updates entire table row with multiple fields and verifies all values', () =
 })
 
 it('Filters web table entries by age and verifies filtered results', () =>{
+    
     navigateTo.smartTablePage()
+    
     const ages = [20, 30, 40, 200]
+    
    cy.wrap(ages).each(age => {
     cy.get('thead [placeholder="Age"]').clear().type(age)
     cy.wait(500)
@@ -84,3 +88,4 @@ it('Filters web table entries by age and verifies filtered results', () =>{
 })
 
 })
+
