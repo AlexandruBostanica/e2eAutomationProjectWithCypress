@@ -1,78 +1,75 @@
-# 🧪 End-to-End Test Automation with Cypress
+```md
+# 🚀 Cypress E2E Automation Playground
 
-![Cypress](https://img.shields.io/badge/Tested%20with-Cypress-04C38E.svg)
-![JavaScript](https://img.shields.io/badge/Language-JavaScript-yellow)
-![Mochawesome](https://img.shields.io/badge/Reporter-Mochawesome-orange)
-![E2E](https://img.shields.io/badge/Testing-E2E-blue)
+![Cypress](https://img.shields.io/badge/Cypress-E2E-green)
+![JavaScript](https://img.shields.io/badge/JavaScript-ES6-yellow)
+![Mochawesome](https://img.shields.io/badge/Reports-Mochawesome-orange)
+![GitHub Pages](https://img.shields.io/badge/Hosting-GitHub%20Pages-blue)
+![Status](https://img.shields.io/badge/Status-Active-success)
 
 ---
 
 ## 📌 Project Overview
 
-This repository contains an **End-to-End (E2E) UI Test Automation project built with Cypress**. The project focuses on validating real user interactions across a wide range of UI components and workflows, serving as a **portfolio-ready example of practical Cypress automation**.
+This repository contains a **comprehensive End-to-End (E2E) test automation framework built with Cypress**.  
+The project is designed as a **portfolio-ready automation showcase**, focusing on real-world UI testing scenarios commonly encountered in production web applications.
 
-The tests are written with an emphasis on **clarity, intent, and user-visible behavior**, making the suite easy to understand for both technical and non-technical stakeholders.
-
----
-
-## 🎯 Project Objectives
-
-* Demonstrate hands-on experience with **Cypress E2E testing**
-* Validate realistic UI workflows and component behavior
-* Apply professional **test naming and structure**
-* Generate clear and readable **HTML test reports**
-* Provide a solid foundation for scalable UI automation
+🔗 **Live Test Report (GitHub Pages)**  
+👉 [https://alexandrubostanica.github.io/e2eAutomationProjectWithCypress/](https://alexandrubostanica.github.io/e2eAutomationProjectWithCypress/)
 
 ---
 
-## 🚀 Key Features
+## 🧪 What This Project Demonstrates (Recruiter Perspective)
 
-* ✅ End-to-end tests simulating real user behavior
-* ✅ Professionally named tests focused on **action and expected outcome**
-* ✅ Coverage of common UI patterns:
+From a QA Automation / SDET standpoint, this project demonstrates:
 
-  * Authentication flows
-  * Form submissions (inline, grid, horizontal, basic)
-  * Dialogs and modals (including delayed dialogs)
-  * Tooltips, sliders, dropdowns
-  * Drag & drop interactions
-  * Smart tables with filtering and data updates
-* ✅ Mochawesome reporting for execution visibility
+- ✅ Strong understanding of **Cypress fundamentals**
+- ✅ Ability to automate **realistic end-to-end user flows**
+- ✅ Handling of **complex UI components and interactions**
+- ✅ Clean, readable, and meaningful test naming
+- ✅ Data-driven testing using **@faker-js/faker**
+- ✅ Validation of:
+  - Authentication flows
+  - Forms (inline, grid, basic, block, horizontal)
+  - Dialogs & modals (standard, delayed, iframe-based)
+  - Web tables (CRUD operations and filtering)
+  - Tooltips and hover interactions
+  - Drag-and-drop functionality
+  - Sliders, dropdowns, checkboxes, and radio buttons
+- ✅ Professional **HTML test reporting**
+- ✅ Public report hosting via **GitHub Pages**
+
+This closely mirrors the expectations for **modern frontend-focused QA automation roles**.
 
 ---
 
-## 🗂️ Project Structure
+## 🏗️ Tech Stack
+
+- **Cypress** – End-to-end testing framework
+- **JavaScript (ES6+)**
+- **[@faker-js/faker](https://www.npmjs.com/package/@faker-js/faker)** – Dynamic test data generation
+- **[cypress-mochawesome-reporter](https://www.npmjs.com/package/cypress-mochawesome-reporter)** – HTML test reports
+- **GitHub Pages** – Public report hosting
+- **Node.js / npm**
+
+---
+
+## 📂 Project Structure
 
 ```text
-.
-├── cypress/
-│   ├── e2e/
-│   │   └── e2eTesting.cy.js      # Main E2E test suite
-│   ├── fixtures/                
-│   └── support/
-│       └── e2e.js               # Cypress support setup
-├── cypress.config.js            # Cypress configuration
-├── package.json                 # Dependencies & scripts
-├── reports/                     # Mochawesome reports (generated)
-└── README.md                    # Project documentation
+cypress/
+ ├── e2e/                 # Feature-based E2E test specifications
+ ├── page-objects/        # Page Object Model (navigation only)
+ ├── reports/             # Mochawesome HTML reports
+ ├── fixtures/            # Test data (optional)
+ └── support/             # Cypress configuration & support files
 ```
 
----
-
-## 🧠 Test Design Approach
-
-The test suite is designed to:
-
-* Validate **user-visible behavior**, not just DOM presence
-* Assert meaningful UI text such as labels, messages, and dialog content
-* Reflect real user journeys and interactions
-* Produce readable output in both code and test reports
-
-Each test name is written to clearly communicate **what is being tested and what outcome is expected**, improving maintainability and report readability.
+💡 Tests are intentionally explicit and readable to clearly communicate intent and Cypress usage.
 
 ---
 
-## ▶️ Running the Tests
+## ▶️ Getting Started
 
 ### 1️⃣ Install dependencies
 
@@ -80,85 +77,95 @@ Each test name is written to clearly communicate **what is being tested and what
 npm install
 ```
 
-### 2️⃣ Run tests in headless mode
+### 2️⃣ Open Cypress Test Runner (interactive mode)
 
 ```bash
-npx cypress run
+npm run cypress:open
 ```
 
-### 3️⃣ Open Cypress Test Runner (interactive mode)
+### 3️⃣ Run tests headlessly
 
 ```bash
-npx cypress open
+npm run cypress:run
 ```
 
 ---
 
 ## 📊 Test Reporting (Mochawesome)
 
-This project uses **Mochawesome** to generate detailed HTML reports after test execution.
+This project uses `cypress-mochawesome-reporter` to generate professional HTML reports.
 
-### Generate reports
+### Report Features
+
+- Single consolidated HTML file
+- Test execution summary
+- Visual charts
+- Embedded screenshots for failed tests
+
+The report is generated automatically when running tests in headless mode.
+
+---
+
+## 🌍 Publish Report to GitHub Pages
+
+### One-command deployment
 
 ```bash
-npx mochawesome-merge reports/*.json > reports/report.json
-npx marge reports/report.json -o reports
+npm run deploy:report
 ```
 
-### View report
+This command performs the following steps:
 
-Open the generated file:
+1. Cleans previous reports
+2. Executes all Cypress tests
+3. Generates the Mochawesome HTML report
+4. Renames the report to `index.html`
+5. Deploys the report to the `gh-pages` branch
 
-```text
-reports/report.html
+📍 The report becomes publicly accessible at:
+
+```
+https://alexandrubostanica.github.io/e2eAutomationProjectWithCypress/
 ```
 
-The report provides:
+---
 
-* Clear pass/fail status
-* Readable test names expressing intent
-* Execution details
+## 📜 NPM Scripts Overview
+
+| Script           | Description                                      |
+|------------------|--------------------------------------------------|
+| `cypress:open`   | Opens Cypress Test Runner                        |
+| `cypress:run`    | Runs tests headlessly                            |
+| `clean:reports`  | Deletes previous reports                         |
+| `test:report`    | Runs tests and generates report                  |
+| `deploy:report`  | Generates and deploys report to GitHub Pages     |
 
 ---
 
-## 📈 Engineering Considerations & Future Improvements
+## 🧠 Design Decisions
 
-This project reflects a clean and pragmatic approach to UI automation.
+- **Minimal abstraction**  
+  No overuse of custom commands; Cypress logic remains visible and reviewable.
 
-Potential future enhancements include:
+- **Navigation-only Page Object Model**  
+  Improves readability without hiding test behavior.
 
-* 🔹 Continuous Integration (GitHub Actions)
-* 🔹 Visual regression testing
-* 🔹 API and UI hybrid test coverage
+- **Dynamic test data**  
+  Reduces flakiness and simulates realistic user input.
+
+- **Explicit assertions**  
+  Makes test intent clear to reviewers and recruiters.
 
 ---
 
-## 🧪 Example Test Naming Standard
+## 🔮 Future Improvements
 
-```js
-it('allows a registered user to log in with valid credentials', () => {
-  // test steps
-})
+- CI integration using GitHub Actions
+- API testing layer
+- Visual regression testing
+- Accessibility validations
+- Parallel test execution
+- Cross-browser testing
 ```
 
-This naming convention improves:
-
-* Test readability
-* Report clarity
-* Long-term maintainability
-
----
-
-## 🧩 What This Project Demonstrates
-
-This project demonstrates practical, job‑ready skills expected from a **QA Automation / SDET engineer** working with modern web applications:
-
-* ✔ Ability to design **clear, intent‑driven E2E tests** using Cypress
-* ✔ Strong understanding of **user‑centric UI validation** (forms, dialogs, tables, interactive components)
-* ✔ Professional test naming that reads clearly in **CI pipelines and HTML reports**
-* ✔ Hands‑on experience with **realistic UI workflows**, not artificial examples
-* ✔ Awareness of test maintainability, readability, and reporting needs
-
-The repository is intentionally focused on **quality over quantity**, showcasing how meaningful tests should look and behave in a real project.
-
----
+--- 
