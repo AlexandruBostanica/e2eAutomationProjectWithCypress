@@ -1,4 +1,4 @@
-```md
+
 # 🚀 Cypress E2E Automation Playground
 
 ![Cypress](https://img.shields.io/badge/Cypress-E2E-green)
@@ -19,7 +19,7 @@ The project is designed as a **portfolio-ready automation showcase**, focusing o
 
 ---
 
-## 🧪 What This Project Demonstrates (Recruiter Perspective)
+## 🧪 What This Project Demonstrates
 
 From a QA Automation / SDET standpoint, this project demonstrates:
 
@@ -38,8 +38,6 @@ From a QA Automation / SDET standpoint, this project demonstrates:
   - Sliders, dropdowns, checkboxes, and radio buttons
 - ✅ Professional **HTML test reporting**
 - ✅ Public report hosting via **GitHub Pages**
-
-This closely mirrors the expectations for **modern frontend-focused QA automation roles**.
 
 ---
 
@@ -166,6 +164,3 @@ https://alexandrubostanica.github.io/e2eAutomationProjectWithCypress/
 - Accessibility validations
 - Parallel test execution
 - Cross-browser testing
-```
-
---- 
