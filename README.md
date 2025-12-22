@@ -152,7 +152,7 @@ https://alexandrubostanica.github.io/e2eAutomationProjectWithCypress/
   Reduces flakiness and simulates realistic user input.
 
 - **Explicit assertions**  
-  Makes test intent clear to reviewers and recruiters.
+  Makes test intent clear.
 
 ---
 
